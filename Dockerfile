@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+FROM nvcr.io/nvidia/pytorch:22.11-py3
 RUN apt update
 RUN apt install -y git
 COPY requirements_reproducibility.txt requirements_reproducibility.txt

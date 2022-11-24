@@ -1,6 +1,6 @@
 # Towards Practical Control of Singular Values of Convolutional Layers
 
-This repository is the official implementation of our NeurIPS 2022 paper "Towards Practical Control of Singular Values of Convolutional Layers" by Alexandra Senderovich, Ekaterina Bulatova, Anton Obukhov and Maxim Rakhuba [[OpenReview]](http://openreview.net/forum?id=T5TtjbhlAZH).
+This repository is the official implementation of our NeurIPS 2022 paper "Towards Practical Control of Singular Values of Convolutional Layers" by Alexandra Senderovich, Ekaterina Bulatova, [Anton Obukhov](https://www.obukhov.ai) and [Maxim Rakhuba](https://scholar.google.com/citations?user=-WOI9p8AAAAJ). [[OpenReview]](http://openreview.net/forum?id=T5TtjbhlAZH)
 
 It demonstrates how to perform low-rank neural network reparameterization to speed up the control over singular values of convolutional layers. The code provides all experiments (LipConv and WideResNet-16-10) from the paper.
 
@@ -9,7 +9,7 @@ It demonstrates how to perform low-rank neural network reparameterization to spe
 In order to install all the necessary dependencies run the following command:
 
 ```
-!pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 In case of problems with generic requirements, fall back to 
@@ -105,3 +105,19 @@ python -m practical_svd_conv.src.robust_metrics --checkpoints-dir <path to folde
 In our code the Cifar-C dataset, corresponding to the dataset a checkpoint was trained on, is downloaded automatically to the path specified by ```--cifar-c-root``` argument. The path to the regular, uncorrupted dataset can be regulated by ```--dataset-root```.
 
 Moreover, let us note that the file "corruptions.txt" is essential for running Cifar-C evaluation.
+
+## Citation
+
+Please cite our work if you found it useful:
+
+```
+@inproceedings{
+senderovich2022towards,
+title={Towards Practical Control of Singular Values of Convolutional Layers},
+author={Alexandra Senderovich and Ekaterina Bulatova and Anton Obukhov and Maxim Rakhuba},
+booktitle={Advances in Neural Information Processing Systems},
+editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+year={2022},
+url={https://openreview.net/forum?id=T5TtjbhlAZH}
+}
+```
