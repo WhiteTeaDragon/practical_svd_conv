@@ -1,4 +1,5 @@
 # Towards Practical Control of Singular Values of Convolutional Layers
+<img src="doc/teaser-image.png">
 
 This repository is the official implementation of our NeurIPS 2022 paper "Towards Practical Control of Singular Values of Convolutional Layers" by Alexandra Senderovich, Ekaterina Bulatova, [Anton Obukhov](https://www.obukhov.ai) and [Maxim Rakhuba](https://scholar.google.com/citations?user=-WOI9p8AAAAJ). [[OpenReview]](http://openreview.net/forum?id=T5TtjbhlAZH)
 
@@ -17,7 +18,7 @@ In case of problems with generic requirements, fall back to
 
 ## Logging
 
-The training code performs logging to [Weights and Biases](wandb.ai). Upon the first run, please enter your wandb credentials, which can be obtained by registering a free account 
+The training code performs logging to [Weights and Biases](https://wandb.ai). Upon the first run, please enter your wandb credentials, which can be obtained by registering a free account 
 with the service.
 
 The [code](src/robust_metrics.py) for computing robust metrics logs results only locally. Computation of ECE takes up less than a minute, and its results are logged only to the console. The accuracy on Cifar-C dataset and the accuracy after applying AutoAttack are logged to the respective paths, specified by command line arguments.
